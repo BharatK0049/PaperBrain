@@ -54,7 +54,7 @@ graph TD
 ---
 ## Alignment Agent: Demo
 
-![Alignment Agent Batch Visualization](assets/alignment_demo.png)
+![Alignment Agent Batch Visualization](PaperBrain/assets/alignment_demo.png)
 
 *Original template (left), real-world distorted scan taken at an angle (center), 
 perspective-corrected output (right). The agent handles severe angular distortion 
