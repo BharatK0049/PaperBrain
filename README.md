@@ -1,9 +1,9 @@
 # PaperBrain – Automated Handwritten Answer Script Evaluation
 
 ## Overview
-**PaperBrain** is an AI-powered system that automates the evaluation of handwritten answer sheets for educational institutions.
+**PaperBrain** is a pipeline for processing template-based handwritten answer sheets and assisting in their evaluation.
 
-Traditional evaluation methods rely on manual checking — which is time-consuming, error-prone, and resource-intensive. Teachers often spend days sorting, grading, and handling physical scripts, leading to delays and inconsistencies in results.
+Traditional grading workflows are manual, time-consuming, and repetitive—especially for structured formats like MCQs and short responses. PaperBrain focuses on reducing this effort by extracting answers from scanned sheets and supporting evaluation with structured outputs and insights.
 
 **PaperBrain** solves this by combining *computer vision, OCR, and semantic AI* to perform fair, fast, and scalable evaluations. It automatically aligns scanned copies, reads handwritten answers, maps them to reference solutions, and generates accurate, bias-free grade reports.
 
@@ -46,10 +46,11 @@ graph TD
 ```
 
 **Key Capabilities:**  
-- Automatic alignment of distorted answer sheets  
-- Semantic understanding of handwritten answers  
-- Smart anomaly flagging for unclear or incomplete responses  
-- Works for both **MCQs and descriptive answers**
+- Automatic alignment of distorted answer sheets
+- Template-based detection of answer regions 
+- OCR on constrained handwritten inputs (e.g., MCQs, single characters)
+- Assistive evaluation for objective-type questions
+- Visualization of student performance and common mistakes
 
 ---
 ## Alignment Agent: Demo
