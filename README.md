@@ -52,6 +52,18 @@ graph TD
 - Works for both **MCQs and descriptive answers**
 
 ---
+## Alignment Agent: Demo
+
+![Alignment Agent Batch Visualization](assets/alignment_demo.png)
+
+*Original template (left), real-world distorted scan taken at an angle (center), 
+perspective-corrected output (right). The agent handles severe angular distortion 
+using ORB keypoint matching and homography transformation.*
+
+## Demo
+[▶ Watch full pipeline demo](https://drive.google.com/file/d/1O539TjCYRhdmIsqcB6AV6_EjRsa9cMi4/view?usp=sharing)
+
+---
 
 ## Team Members
 - Gaurav Mahesh

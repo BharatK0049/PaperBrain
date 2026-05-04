@@ -8,6 +8,6 @@ matplotlib
 seaborn
 pandas
 easyocr
-google-generativeai
+google-genai
 mcp
 python-dotenv

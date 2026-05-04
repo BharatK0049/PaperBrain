@@ -2,7 +2,10 @@ import os
 import json
 import csv
 from dotenv import load_dotenv
-import google.generativeai as genai
+from google import genai
+import time
+
+time.sleep(4)
 
 # ---------------- Environment Setup ----------------
 load_dotenv()
@@ -10,9 +13,7 @@ API_KEY = os.getenv("GEMINI_API_KEY")
 if not API_KEY:
     raise ValueError("GEMINI_API_KEY not found in .env file!")
 
-genai.configure(api_key=API_KEY)
-MODEL_NAME = "gemini-2.5-flash"
-model = genai.GenerativeModel(MODEL_NAME)
+client = genai.Client(api_key=API_KEY)
 
 # ---------------- Paths ----------------
 INCOMING_FOLDER = "../text_recognition/Outputs"
@@ -101,7 +102,10 @@ Use any additional context from the uploaded related documents to ensure more ac
         contents.extend(related_docs)
 
     try:
-        response = model.generate_content(contents=contents)
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents="your prompt"
+        )
         text = response.text.strip()
 
         start, end = text.find("{"), text.rfind("}")

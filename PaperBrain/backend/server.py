@@ -744,4 +744,4 @@ if __name__ == "__main__":
     print(f"📍 Frontend UI at http://localhost:3000/ui")
     print("="*60 + "\n")
     
-    app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(host="0.0.0.0", port=port, debug=True, use_reloader=False)

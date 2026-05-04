@@ -45,7 +45,7 @@ try:
 
     # Barplot: Student performance %
     plt.figure(figsize=(10,6))
-    sns.barplot(x="Student Name", y="percentage", data=student_scores, palette="viridis")
+    sns.barplot(x="Student Name", y="percentage", hue="Student Name", data=student_scores, palette="viridis", legend=False)
     plt.title("Overall Student Performance (%)")
     plt.ylabel("Percentage Score")
     plt.xticks(rotation=45)
@@ -58,7 +58,7 @@ try:
     incorrect_count = incorrect_q.groupby("Question No").size().reset_index(name="count")
 
     plt.figure(figsize=(8,5))
-    sns.barplot(x="Question No", y="count", data=incorrect_count, palette="magma")
+    sns.barplot(x="Question No", y="count", hue="Question No", data=incorrect_count, palette="magma", legend=False)
     plt.title("Most Incorrect Questions (0 or Partial Marks)")
     plt.ylabel("Number of Students with Incorrect Answer")
     plt.tight_layout()
@@ -134,7 +134,7 @@ try:
                 plt.savefig(os.path.join(OUTPUT_FOLDER, "current_student_performance.png"))
                 plt.close()
                 
-                print(f"✅ Generated current student visualization for {current_student_name}")
+                print(f"[OK] Generated current student visualization for {current_student_name}")
 
     # ================= SUMMARY TABLE =================
     summary_table = student_scores[["Student Name", "total_awarded", "total_possible", "percentage"]]
